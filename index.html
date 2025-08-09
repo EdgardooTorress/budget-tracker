@@ -7,17 +7,19 @@
     <title>Budget tracker</title>
 </head>
 <body>
+    
 <main>
+    <h1 class="title"> Budget Tracker 💰</h1>
     <div class="budget-box">
-        <div class="total-budget"> $0</div>
+        <div class="total-budget"><span id="available-money">$0</span></div>
         <form action="">
-            <input type="text" placeholder="Description">
-            <input type="number" min="0" placeholder="Amount">
+            <input id="description" type="text" placeholder="Description">
+            <input id="number" type="number" min="0" placeholder="Amount">
         </form>
 
         <div>
-        <button type="submit">Income</button>
-        <button>Expense</button>
+        <button id="add-income">Income 💵</button>
+        <button id="add-expense">Expense 💸</button>
         </div>
 
         <div class="list">
@@ -27,12 +29,15 @@
                 <div class="income-list">
 
                 </div>
+                <p>Earned: <span>$</span><span id="earned"> 0</span></p> 
             </div>
             <div class="expenses"> 
                 <h2>Expenses</h2>
                 <div class="expenses-list">
-
                 </div>
+                <p>Spent: <span>$</span><span id="spent"> 0</span></p> 
+
+        
         
             </div>
 
