@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Budget tracker</title>
 </head>
 <body>
@@ -11,10 +12,13 @@
 <main>
     <h1 class="title"> Budget Tracker 💰</h1>
     <div class="budget-box">
-        <div class="total-budget"><span id="available-money">$0</span></div>
+        <h2>Avaliable Money </h2>
+        <div class="total-budget">
+           <p>$<span id="available-money">0</span></p> 
+        </div>
         <form action="">
             <input id="description" type="text" placeholder="Description">
-            <input id="number" type="number" min="0" placeholder="Amount">
+            <input id="amount" type="number" min="0" placeholder="Amount">
         </form>
 
         <div>
@@ -33,7 +37,7 @@
             </div>
             <div class="expenses"> 
                 <h2>Expenses</h2>
-                <div class="expenses-list">
+                <div class="expense-list">
                 </div>
                 <p>Spent: <span>$</span><span id="spent"> 0</span></p> 
 

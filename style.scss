@@ -1,79 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 $primary-color: #f4f4f4;
-$color1: #e885049d;
+$color1: #ccf6349d;
 $color2: #ff0000a3;
-$color3: #dabc11bc;
+$color3: #6c9624;
+$color4: black;
 @mixin gradient($color1, $color2, $color3) {
-    background: linear-gradient(to right, $color1, $color2, $color3);
+  background: linear-gradient(to bottom left, $color1, $color2, $color3);
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes showDelet {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-body{
-    @include gradient($color1,$color2 ,$color3);
-    min-height: 100vh;
-    display:flex ;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-h1{
+body {
+  @include gradient($color1, $color2, $color3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: rem;
+}
+
+.budget-box {
+  min-height: 30rem;
+  height: auto;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: solid 2px black;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.total-budget {
+  p {
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 5rem;
-    background-color: $primary-color;
+  }
+
+  width: 30rem;
 }
 
- .budget-box{
-    height: 30rem;
-    width: 40rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-     border: solid 2px black;
-    background-color: $primary-color;
-    }
+.list {
+  margin-top: 2rem;
+  border: 1px border solid;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
 
-.total-budget{
-    background-color: $primary-color;
-    width: 30rem;
-}
-
-.list{
-    margin-top: 2rem;
-    border: 1px border solid;
-    display: flex;
-    justify-content:space-evenly;
-    gap: 5rem;
-    
-    .income{
+  .income {
     text-align: center;
     width: 15rem;
     border: solid 2px black;
-    background-color: aquamarine;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
-    .income-list{
-        background-color: white;
-        height: 10rem;
+    .income-list {
+      background-color: white;
+      height: auto;
+      margin-bottom: 1rem;
     }
-}
-.expenses{
+  }
+  .expenses {
     text-align: center;
     width: 15rem;
     border: solid 2px black;
-    background-color: aquamarine;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
 
-     .expenses-list{
-        background-color: white;
-        height: 10rem;
+  .expense-list {
+    background-color: white;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+#description {
+  width: 15rem;
+  height: 1.5rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+#amount {
+  width: 6rem;
+  height: 1.5rem;
+  border-radius: 30px;
+  text-align: center;
+}
+
+button {
+  width: 10rem;
+  margin: 1rem 2rem;
+  border-radius: 10px;
+  height: 2rem;
+  font-size: 1.2rem;
+  transition: all 0.5 ease-in-out;
+}
+button:hover {
+  background-color: black;
+  animation: showDelet;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  color: white;
+}
+
+.item {
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  margin: 3px 0;
+
+  .item-income {
+    display: flex;
+  }
+
+    .income-symbol {
+      color: $color4;
     }
-}
 
-}
+    .income-amount {
+      color: $color4;
+    }
 
+  .item-expense {
+    display: flex;
+  }
 
+    .expense-symbol {
+      color: $color4;
+    }
 
+    .expense-amount {
+      color: $color4;
+    }  
+  }
