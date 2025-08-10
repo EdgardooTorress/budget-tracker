@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-@keyframes showDelet {
+@keyframes btnTransition {
   0% {
     transform: translateX(30px);
-    opacity: 0;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 * {
@@ -36,7 +34,7 @@ h1 {
 .budget-box {
   min-height: 30rem;
   height: auto;
-  width: 40rem;
+  width: 40.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +108,7 @@ button {
 
 button:hover {
   background-color: black;
-  animation: showDelet;
+  animation: btnTransition;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   color: white;
