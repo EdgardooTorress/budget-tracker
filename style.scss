@@ -166,3 +166,16 @@ button:hover {
       color: $color4;
     }  
   }
+
+  
+@media (max-width: 768px){
+
+    html{
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 430px){
+    html{
+        font-size: 50%;
+    }}
